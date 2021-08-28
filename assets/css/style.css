@@ -1,5 +1,5 @@
 :root {
-  --cream: rgb(255, 244, 223);
+  --cream: rgb(235, 224, 205);
   --red: rgb(255, 67, 67);
   --black: black;
   --gold: rgb(255, 149, 11);
@@ -12,7 +12,7 @@ body {
   font-size: 20px;
   line-height: 1.5;
   color: var(--black);
-  background: var(--cream);
+  background-color: var(--cream);
 }
 
 header {
@@ -85,23 +85,26 @@ h2 {
 
 .hero p {
   text-align: left;
-  text-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 article {
   max-width: 30%;
-  text-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 10px;
 }
+
 section {
   display: flex;
   justify-content: space-around;
 }
 
 .title {
+  color: var(--red);
   text-align: right;
   padding:20px;
 }
+
 #contact-me ul {
   display: flex;
   flex-wrap: wrap;
@@ -124,16 +127,43 @@ section {
   align-items: row;
 }
 
-#my-work {
+/* #my-work {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: none;
   justify-content: flex-start;
   align-items: row;
+} */
+
+.work-container {
+  width: 70%;
 }
 
-#my-work div {
+/* #my-work div {
   display: flex;
   justify-content: space-around;
+} */
+
+.work-jumbo {
+  align-self: center;
+  width: 100%;
+  border: 2px;
+  border-color: var(--navy);
+  height: 200px;
+  position: relative;
+}
+
+.image-banner {
+  position: absolute;
+  bottom: 3em;
+}
+
+.work {
+  width: 30%;
+  position: relative;
+}
+
+.work-row {
+  display: flex;
 }
 
 #contact-me {
@@ -153,14 +183,4 @@ section {
 #contact-me ul li {
   display: inline;
   padding: 10px 15px;
-}
-
-.work-jumbo {
-  align-self: center;
-  width: 90%;
-  text-align: right;
-}
-
-.work {
-  width: 30%;
 }
