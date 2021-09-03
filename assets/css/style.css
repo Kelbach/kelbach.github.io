@@ -23,10 +23,10 @@ header {
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
   background-image: url("../images/banner/IMG_0879.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -37,15 +37,10 @@ header {
 
 header h1 {
   font-size: 50px;
-  padding: 20px 0;
-  margin: 0;
-  margin-bottom: 20px;
   color: var(--red);
-  text-align: left;
 }
 
 header nav {
-  margin: 20px 0;
   font-size: 30px;
 }
 
@@ -67,14 +62,9 @@ a:hover {
 }
 
 .hero {
-  height: 200px;
   color: var(--cream);
   background-color: var(--brown);
-  display: flex;
-  justify-content: flex-end;
   overflow: hidden;
-  flex-wrap: wrap;
-  align-items: flex-end;
   background-image: url("../images/banner/IMG_0879.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -84,11 +74,14 @@ a:hover {
 .hero article {
   max-width: 30%;
   font-size: 15px;
+  float: right;
+  margin: 30px 30px;
 }
 
 .hero article p {
-  margin: 2px;
+  margin: 2px auto;
   text-shadow: 2px 2px 2px var(--black);
+  text-align: right;
 }
 
 /*section {
@@ -121,13 +114,13 @@ a:hover {
 #about-me img {
   width: 300px;
   height: 300px;
-  margin: 2.5%;
+  margin: 2.5% auto;
   border-radius: 150px;
 }
 
 #about-me article {
-  margin: 2.5%;
-  max-width: 46%;
+  margin: auto;
+  width: 45%;
 }
 
 #my-work {
@@ -138,7 +131,7 @@ a:hover {
 
 .work-container {
   width: 70%;
-  margin: 0.5% 10px;
+  margin: 0.5% auto;
 }
 
 .image-banner {
@@ -154,7 +147,7 @@ a:hover {
 
 .image-banner h3 {
  text-decoration: underline;
- margin: 0;
+ margin: 0 auto;
 }
 
 .image-banner h4{
@@ -164,7 +157,7 @@ a:hover {
 
 .work-jumbo {
   overflow: hidden;
-  margin: 1% 2.4%;
+  margin: 1% auto;
   border: 2px solid var(--navy);
   height: 55%;
   position: relative;
@@ -179,9 +172,9 @@ a:hover {
 
 .work-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 40%;
-  margin: 1% 10px;
+  margin: 1% auto;
 }
 
 .work {
@@ -189,7 +182,7 @@ a:hover {
   position: relative;
   padding: 0;
   height: 100%;
-  width: 30%;
+  width: 32%;
   border: 2px solid var(--navy);
   border-radius: 10px;
   background-color: var(--brown);
@@ -208,17 +201,21 @@ a:hover {
 } 
 
 #contact-me {
+  font-size: 18px;
   display: flex;
 }
 
 #contact-me ul {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: space-around;
+  width: 70%;
+  margin: 0 2.5%;
 }
 
 #contact-me ul li {
   display: inline;
-  padding: 0 20px 0 0;
+  padding: 0 10px;
 }
 
 footer {
@@ -230,4 +227,102 @@ footer {
   background-attachment: fixed;
   background-position: 100%;
   height: 50px;
+}
+
+@media screen and (max-width: 1215px) {
+  .title h2{
+    font-size: 25px;
+  }
+
+  #contact-me ul li{
+    flex: 1 40%;
+    padding: 2px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  header nav {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .hero article {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 80px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  header nav {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero article {
+    font-size: 17px;
+    margin: auto;
+    float: none;
+    margin: 40px auto;
+  }
+
+  .hero article p {
+    text-align: center;
+  }
+
+  #about-me, #my-work, #contact-me {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  #about-me article {
+    width: 50%;
+  }
+
+  .title {
+    border-right: 0px;
+    width: 100%;
+    border-bottom: 2px solid var(--navy);
+    margin: 10% 25% 0;
+  }
+
+  .title h2 {
+    font-size: 60px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .work-container {
+    width: 90%;
+  }
+
+  .work-jumbo{
+    height: 700px;
+  }
+
+  .work {
+    height: 300px;
+  }
+
+  #contact-me ul {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+  }
+
+  #contact-me ul li {
+    font-size: 25px;
+  }
+
+  footer {
+    font-size: 20px;
+  }
+
 }
