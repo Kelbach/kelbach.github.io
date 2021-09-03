@@ -16,7 +16,6 @@ body {
   color: var(--black);
   background-color: var(--cream);
   margin: 0;
-  transition: 1s;
 }
 
 header {
@@ -116,26 +115,24 @@ a:hover {
 
 #about-me {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   height: 45%;
 }
 
-#about-me .about-me-image {
+#about-me img {
   width: 300px;
   height: 300px;
   margin: 2.5%;
-  border-radius: 10px;
+  border-radius: 150px;
 }
 
-#about-me .article p {
+#about-me article {
   margin: 2.5%;
+  max-width: 46%;
 }
 
 #my-work {
   display: flex;
   flex-wrap: none;
-  justify-content: flex-start;
   height: 500px;
 }
 
@@ -168,7 +165,6 @@ a:hover {
 .work-jumbo {
   overflow: hidden;
   margin: 1% 2.4%;
-  width: 95%;
   border: 2px solid var(--navy);
   height: 55%;
   position: relative;
@@ -213,7 +209,6 @@ a:hover {
 
 #contact-me {
   display: flex;
-  justify-content: flex-start;
 }
 
 #contact-me ul {
@@ -227,7 +222,7 @@ a:hover {
 }
 
 footer {
-  font-size: 15px;
+  font-size: 25px;
   text-align: center;
   color: var(--gold);
   background-image: url("../images/banner/IMG_0879.jpg");
